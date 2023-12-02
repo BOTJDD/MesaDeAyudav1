@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-primary: #148C82;
+    --color-danger: #fa005a;
+    --color-success: #1e968c;
+    --color-warning: #f0c85c;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --color-primary-transparent: #148c8230;
+    --color-primary-shadow: #09413c85;
+
+    --card-border-radius: 1rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:transparent;
+}
+
+.container{
+    background-color: #fff;
+    width: 90vmin;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: var(--border-radius-2);
+    box-shadow: 0 25px 50px var(--color-primary-shadow);
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+button{
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius-1);
+    border: none;
+    background-color: #fff;
+    outline: none;
+    color: #020929;
+    cursor: pointer;
+    
+}
+
+button :hover{
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary-transparent);
+}
+
+select{
+    padding: 7px;
+    border: 1px var(--color-primary);
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+}
+
+.options label,
+.options select{
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="color"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 16px;
+    height: 20px;
+    border: none;
+    cursor: text;
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch{
+    border-radius: var(--border-radius-1);
+    box-shadow: 0 0 0 1px #fff, 0 0 0 1px var#020929;
+}
+
+input[type="color"]::-moz-color-swatch{
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 1px #020929;
+}
+
+
+#text-input{
+    overflow-y: scroll;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 50vh;
+    border-radius: var(--border-radius-2);
+}
+
+#text-input::-webkit-scrollbar{
+    width: 0.5REM;
+}
+
+#text-input::-webkit-scrollbar-thumb{
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-2);
+}
+
+
+.active{
+    background-color: var(--color-primary-transparent);
+}

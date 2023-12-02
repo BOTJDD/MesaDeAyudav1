@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mesa Ayuda Procesamiento Informacion | FIC - Mesa De Ayuda</title>
+</head>
+<body class="body">
+    <div class="container">
+        <!-- Sidebar -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/FIC.png">
+                </div>
+                <div class="close" id="close-btn">
+                </div>
+            </div>
+
+            <div class="sidebar" class="active">
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Tablero</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Usuarios</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Historial</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analitica</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">5</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reportes</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Ajustes</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Cerrar Sesion</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Tablero Administrador</h1>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="tickets">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Tickets</h3>
+                            <h1>50</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Visitas al Sitio</h3>
+                            <h1>0</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-0%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Busquedas</h3>
+                            <h1>14</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Analyses -->
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>Admin Conectados</h2>   
+                <div class="user-list">
+                    <div class="user">
+                        <img src="images/lola.jpeg">
+                        <h2>JDD</h2>
+                    </div>
+                    <div class="user">
+                        <img src="images/aispuro.jpg">
+                        <h2>Elifosters</h2>
+                    </div>
+                    <div class="user">
+                        <img src="images/chris.jpg">
+                        <h2>Chris</h2>
+                    </div>
+                    <div class="user">
+                        <img src="images/plus.png">
+                        <h2>Mas</h2>
+                        <p>Usuarios Inactivos</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Tickets Abiertos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tickets</th>
+                            <th>Propietario</th>
+                            <th>Estatus</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Mostrar todos</a>
+            </div>
+            <!-- End of Recent Orders -->
+        </main>
+        <!-- End of Main Content -->
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Bienvenido, <b>Administrador</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/now.png">
+                    </div>
+                </div>
+            </div>
+            <!-- End of Nav -->
+            <div class="headreminders">
+                <h2>Notificaciones</h2>
+            <span class="material-icons-sharp">
+                notifications_none
+            </span>
+            </div>
+            <div class="notifications">
+                <div class="header">
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>GRAFICAAAAS</h3>
+                            <small class="text_muted">
+                                14:00
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>YA QUEDO EL RCN???????</h3>
+                            <small class="text_muted">
+                                16:00
+                            </small>
+                        </div>  
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>GRAFICAAAAS</h3>
+                            <small class="text_muted">
+                                14:00
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>YA QUEDO EL RCN???????</h3>
+                            <small class="text_muted">
+                                16:00
+                            </small>
+                        </div>  
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>GRAFICAAAAS</h3>
+                            <small class="text_muted">
+                                14:00
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>YA QUEDO EL RCN???????</h3>
+                            <small class="text_muted">
+                                16:00
+                            </small>
+                        </div>  
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>GRAFICAAAAS</h3>
+                            <small class="text_muted">
+                                14:00
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>YA QUEDO EL RCN???????</h3>
+                            <small class="text_muted">
+                                16:00
+                            </small>
+                        </div>  
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>GRAFICAAAAS</h3>
+                            <small class="text_muted">
+                                14:00
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>YA QUEDO EL RCN???????</h3>
+                            <small class="text_muted">
+                                16:00
+                            </small>
+                        </div>  
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            remove  
+                        </span>
+                        <h3>Eliminar Notificaciones</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

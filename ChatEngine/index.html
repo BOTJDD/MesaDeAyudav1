@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat | FIC - Mesa De Ayuda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Person selector: this contains buttons for user to select whether to chat as John or Jane -->
+    <div class="person-selector">
+      <button class="button person-selector-button active-person" id="john-selector">Elifosters</button>
+      <button class="button person-selector-button" id="jane-selector">Administrador</button>
+    </div>
+    <div class="chat-container">
+      <h2 class="chat-header">Elifosters...</h2>
+
+      <div class="chat-messages">
+        <div class="message blue-bg">
+          <div class="message-sender">Elifosters</div>
+          <div class="message-text">Hey que pex?</div>
+          <div class="message-timestamp">10:30 AM</div>
+        </div>
+        <div class="message gray-bg">
+          <div class="message-sender">Administrador</div>
+          <div class="message-text">Nada w pq?</div>
+          <div class="message-timestamp">10:35 AM</div>
+        </div>
+      </div>
+      <form class="chat-input-form">
+        <form method="post" enctype="multipart/form-data">
+          <label for="file">File</label>
+          <input id="file" name="file" type="file" />
+          <input type="text" class="chat-input" required placeholder="Escribe Aqui, Elifosters..." />
+          <button type="submit" class="button send-button">Send</button>
+        </form>        
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

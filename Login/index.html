@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Iniciar Sesion | UAS FIC - Mesa De Ayuda</title>
+</head>
+
+<body class="color-fondo">
+    <div class="container" id="container">
+        <div class="form-container admin-sign-in">
+            <form>
+                <img src="images/fic.png">
+                <h1><center>Administrador</center></h1>
+                <input maxlength="8" placeholder="Numero de Empleado"oninput=" this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                <input type="password"  placeholder="Contraseña">
+                <button>Iniciar Sesion</button>
+                <a href="#">Olvide Mi Contraseña</a>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <img src="images/fic.png">
+                <h1><center> Iniciar Sesion</center></h1>
+                <input maxlength="8" placeholder="Numero de Empleado"oninput=" this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                <input type="password"  placeholder="Contraseña">           
+                <button>Iniciar Sesion</button>
+                <a href="#">Olvide Mi Contraseña</a>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¿No eres Administrador?</h1>
+                    <p>Haz click aqui para iniciar como Usuario</p>
+                    <button class="hidden" id="login">Soy Usuario</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¿Eres Administrador?</h1>
+                    <p>Haz click aqui para iniciar como <b>Administrador</b></p>
+                    <button class="hidden" id="register">Soy admin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

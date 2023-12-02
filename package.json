@@ -1,0 +1,20 @@
+{
+  "name": "mesadeayuda",
+  "version": "1.0.0",
+  "description": "GulpFile",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "SASS",
+    "gulp"
+  ],
+  "author": "Juan De Dios Hinojoza Reyes, Elisa Aispuro Aispuro, Manuel Palomares Briseño, Dante Emmanuel Diaz Zamora, Jose Emmanuel Rodriguez Alvarado, Cristofer Jesus Chavez Ambriz",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.69.5"
+  }
+}
