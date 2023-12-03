@@ -20,22 +20,30 @@
                     <span id="name_validation"></span>
                 </div>
                 <div class="row">
-                    <label for="name">Apellido Materno:</label>
-                    <input id="name" name="name" type="text" value="" size="30" />
-                    <span id="name_validation"></span>
+                    <label for="lastname1">Apellido Materno:</label>
+                    <input id="lastname1" name="lastname1" type="text" value="" size="30" />
+                    <span id="lastname1_validation"></span>
                 </div>
                 <div class="row">
-                    <label for="name">Apellido Paterno:</label>
-                    <input id="name" name="name" type="text" value="" size="30" />
-                    <span id="name_validation"></span>
+                    <label for="lastname2">Apellido Paterno:</label>
+                    <input id="lastname2" name="lastname2" type="text" value="" size="30" />
+                    <span id="lastname2_validation"></span>
                 </div>
                 <div class="row">
-                    <label for="email">Numero Matricula:</label>
-                    <input id="number" name="email" type="text" value="" size="30" />
-                    <span id="email_validation"></span>
+                    <label for="opciones">Selecciona Categoria Del Asunto:</label>
+                    <select id="opciones" name="opciones">
+                        <option value="opcion1">Opción 1</option>
+                        <option value="opcion2">Opción 2</option>
+                        <option value="opcion3">Opción 3</option>
+                    </select>
                 </div>
                 <div class="row">
-                    <label for="message">Mensaje:</label><br />
+                    <label for="affair">Asunto:</label>
+                    <input id="affair" name="affair" type="text" value="" size="30"/>
+                    <span id="affair_validation"></span>
+                </div>
+                <div class="row">
+                    <label for="message">Descripcion:</label><br />
                     <textarea id="message" name="message" rows="20" cols="92"></textarea><br />
                     <span id="message_validation"></span>
                 </div>
