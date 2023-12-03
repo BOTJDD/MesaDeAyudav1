@@ -9,7 +9,7 @@
             </div>
 
             <div class="sidebar" class="active">
-                <a href="../Dashboard/index.php">
+                <a href="../../Dashboard/index.php">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -52,11 +52,11 @@
                     </span>
                     <h3>Ajustes</h3>
                 </a>
-                <a href="../Login/index.html">
+                <a href="#">
                     <span class="material-icons-sharp">
                     logout
                     </span>
-                    <h3>Cerrar Sesion</h3>
+                    <h3>Iniciar Sesion</h3>
                 </a>
             </div>
         </aside>
