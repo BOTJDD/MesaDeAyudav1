@@ -1,0 +1,67 @@
+/* Estilos básicos para la página de ajustes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../Dashboard/images/uas.png);
+    background-size: cover;
+    position: relative;
+  }
+  
+  header {
+    background-color: #100733;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #100733;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #100733;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+  }
+/* Estilos básicos para la página de ajustes */
+
+/* Estilos anteriores se mantienen */
+
+/* Estilos para las secciones */
+section {
+    margin-bottom: 30px;
+  }
+    
