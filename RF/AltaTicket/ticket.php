@@ -30,6 +30,11 @@
                     <span id="lastname2_validation"></span>
                 </div>
                 <div class="row">
+                    <label for="lastname2">Numero De Cuenta:</label>
+                    <input id="lastname2" name="lastname2" type="text" value="" size="30" />
+                    <span id="lastname2_validation"></span>
+                </div>
+                <div class="row">
                     <label for="opciones">Selecciona Categoria Del Asunto:</label>
                     <select id="opciones" name="opciones">
                         <option value="opcion1">Opción 1</option>
