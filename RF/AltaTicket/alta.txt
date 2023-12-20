@@ -1,2 +1,0 @@
-Un alta de ticket debe llevar el nombre completo, numero de matricula, 
-datos de contacto, saber que rol 
