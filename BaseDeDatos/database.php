@@ -1,16 +1,15 @@
 <?php
-//Pa saber en cual error hay
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 function conectarDB(){
-    $db = mysqli_connect('localhost', 'root', '2001', 'mesadeayuda');
+    $db = new mysqli('localhost', 'root', '2001', 'mesadeayuda');
     if(!$db){
-        echo "Error no se pudo conectar";
-    }else{
-        echo "Se pudo conectar";
+        // Si hay un error, muestra un mensaje y devuelve false
+        echo "Error al conectar: " . mysqli_connect_error();
+        exit;
+    } else {
+        // Si la conexión es exitosa, devuelve el objeto de conexión
+        return $db;
     }
 }
-conectarDB();
 ?>

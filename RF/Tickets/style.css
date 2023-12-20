@@ -1,5 +1,3 @@
-/* Estilos básicos para la página de historial de tickets */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,77 +7,56 @@ body {
   position: relative;
     background-color: #f4f4f4;
     color: #333;
-  }
-  
-  header {
-    background-color: #100733;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #100733;
-  }
-  
-  section {
-    margin-bottom: 30px;
-  }
-  
-  h2 {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  select, button {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #100733;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  footer {
-    background-color: #100733;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.ticket {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-info {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ticket-info span {
+  font-weight: normal;
+}
+
+/* Estilos para los botones */
+.boton {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  background-color: #100733;
+}
+
+/* Estilo para el primer botón */
+.boton.boton1 {
+  color: #fff; /* Color del texto */
+  background-color: #100733; /* Color de fondo azul oscuro */
+  margin-right: 10px; /* Espacio entre botones */
+}
+
+/* Estilo para el segundo botón */
+.boton.boton2 {
+  color: #fff; /* Color del texto */
+  background-color: #100733;
+  border: 2px solid #1E90FF; /* Borde azul oscuro */
+}
+
+/* Efecto al pasar el ratón por encima */
+.boton:hover {
+  opacity: 0.8; /* Reducción de la opacidad al pasar el ratón */
+}

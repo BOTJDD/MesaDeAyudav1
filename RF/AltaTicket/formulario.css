@@ -1,16 +1,67 @@
-form{
-    margin: 50px auto 50px;
-    color: var(--color-dark);
-    background-color: var(--color-background);
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../Dashboard/images/uas.png);
 }
-label{
-    padding: 2rem;
-    font-size: 1.5rem;
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-input{
-    padding: 2rem;
-    border-radius: 1rem;
+
+/* Estilos para los títulos y etiquetas del formulario */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
-.row{
-    margin-bottom: 2rem;
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de enviar */
+#submit_button {
+    padding: 10px 20px;
+    background-color: #120144;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit_button:hover {
+    background-color: #0c92b7;
+}
+
+/* Estilos para las alertas de error */
+.alerta.error {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Estilos para el mensaje de validación */
+span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #a94442;
 }

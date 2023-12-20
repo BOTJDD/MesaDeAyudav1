@@ -1,3 +1,29 @@
+<?php 
+    require '../plantilla/funciones.php';
+    $auth = estaAutenticado();
+    if(!$auth){
+        header('Location: ../Login/index.php');
+    }
+    if($_SESSION['Rol'] != 1){
+        header('Location: ../RF/AltaTicket/ticket.php');
+    }
+
+
+  //Imprime errores que pueden salir
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  //Importar Base De Datos
+  require '../BaseDeDatos/database.php';
+  $db = conectarDB();
+
+  $consulta = "SELECT tickets.FOLIO_TICKET, tickets.OPCIONES, tickets.ASUNTO, tickets.DESCRIPCION, tickets.FECHA_CREACION, tickets.ID_USUARIO, 
+    usuario.NOMBREUSUARIO, usuario.USUARIOID, usuario.ROLID, usuario.ECORREO, usuario.NOMBRE, usuario.APELLIDOPATERNO, usuario.APELLIDOMATERNO, usuario.FOTOPERFIL, usuario.NUMEROCUENTA, usuario.GRUPO, usuario.GRADO
+    FROM tickets INNER JOIN usuario ON tickets.ID_USUARIO = USUARIOID";
+  $resultado = mysqli_query($db, $consulta);
+  $usuario = mysqli_fetch_assoc($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +36,17 @@
 <body class="body">        
     <div class="container"> 
         <?php include "../plantilla/aside.php"?>
-
         <main>
-            <h1>Tablero Administrador</h1>
-            <!-- Analyses -->
+        <?php
+            if($_SESSION['Rol'] == 1){
+                ?><h1>Bienvenido Administrador</h1><?php
+            }else{
+                ?><<h1>Bienvenido Usuario</h1><?php
+            }
+        ?>
+            
+            
+            <!-- Analyses --><!--
             <div class="analyse">
                 <div class="tickets">
                     <div class="status">
@@ -63,11 +96,51 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- End of Analyses -->
-            <!-- New Users Section -->
+
+<!-- New Users Section -->
+<div class="new-users">
+    <h2>Admin Colaboradores</h2>   
+    <div class="user-list">
+        <?php
+
+        // Consulta para obtener usuarios con rol igual a 1
+        $consulta2 = "SELECT * FROM usuario WHERE ROLID = 1";
+        $resultado2 = mysqli_query($db, $consulta2);
+
+        if ($resultado2->num_rows > 0) {
+            while ($usuario = $resultado2->fetch_assoc()) {
+                echo '<div class="user">';
+
+                if(isset($usuario["FOTOPERFIL"]) && !empty($usuario["FOTOPERFIL"])){
+                    $ruta_imagen = '../Imagenes/' . $usuario["FOTOPERFIL"] . '.jpg';
+                    if (file_exists($ruta_imagen)) {
+                    echo '<img src="../Imagenes/' . $usuario["FOTOPERFIL"] . '.jpg">';
+                }else{
+                    echo '<img src="../Imagenes/fotodefault.jpg">';
+                }}else{
+                    echo '<img src="../Imagenes/fotodefault.jpg">';
+                }
+
+                echo '<h2>' . $usuario["NOMBREUSUARIO"] . '</h2>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>No hay usuarios con rol de administrador.</p>';
+        }
+        // Cerrar la conexión a la base de datos
+
+        ?>
+    </div>
+</div>
+<!-- End of New Users Section -->
+
+
+
+            <!-- New Users Section 
             <div class="new-users">
-                <h2>Admin Conectados</h2>   
+                <h2>Admin Colaboradores</h2>   
                 <div class="user-list">
                     <div class="user">
                         <img src="/Dashboard/images/lola.jpeg">
@@ -87,7 +160,7 @@
                         <p>Usuarios Inactivos</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- End of New Users Section -->
             <!-- Recent Orders Table -->
             <div class="recent-orders">
@@ -95,16 +168,27 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Tickets</th>
+                            <th>ID Ticket</th>
+                            <th>Grado Y Grupo</th>
                             <th>Propietario</th>
-                            <th>Estatus</th>
+                            <th>Asunto</th>
                             <th></th>
                         </tr>
+
+                    <?php
+                        if ($resultado->num_rows > 0) {
+                            while ($consulta = $resultado->fetch_assoc()) {  ?>  
+                            <tr>
+                                <th><?php echo $consulta["FOLIO_TICKET"];?></th>
+                                <th><?php echo $consulta["GRADO"] . '-' . $consulta["GRUPO"] ;?></th>
+                                <th><?php echo $consulta["NOMBREUSUARIO"];?></th>
+                                <th><?php echo $consulta["ASUNTO"];?></th>
+
+                            </tr>
+                            <?php }}?>
                     </thead>
-                    <tbody></tbody>
+                    
                 </table>
-                <a href="#">Mostrar todos</a>
             </div>
             <!-- End of Recent Orders -->
         </main>

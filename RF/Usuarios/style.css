@@ -73,4 +73,54 @@ body {
     bottom: 0;
     width: 100%;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
+  /* Estilos para la barra de navegación */
+  .navbar {
+
+    display: flex;
+    justify-content: space-between; /* Para separar los botones */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para los botones */
+  .boton {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    background-color: #100733;
+  }
+  
+  /* Estilo para el primer botón */
+  .boton.boton1 {
+    color: #fff; /* Color del texto */
+    background-color: #100733; /* Color de fondo azul oscuro */
+    margin-right: 10px; /* Espacio entre botones */
+  }
+  
+  /* Estilo para el segundo botón */
+  .boton.boton2 {
+    color: #fff; /* Color del texto */
+    background-color: #100733;
+    border: 2px solid #1E90FF; /* Borde azul oscuro */
+  }
+  
+  /* Efecto al pasar el ratón por encima */
+  .boton:hover {
+    opacity: 0.8; /* Reducción de la opacidad al pasar el ratón */
+  }
+  img{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 20%;
+
+  }

@@ -280,3 +280,14 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+.alerta{
+    padding: .5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    &.error{
+        background-color: rgb(255, 208, 0);
+    }
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
   <?php
-  require '../../plantilla/funciones.php';
+  require '../../../plantilla/funciones.php';
   $auth = estaAutenticado();
   if (!$auth) {
-    header('Location: ../../Login/index.php');
+    header('Location: ../../../Login/index.php');
   }
 
   //Imprime errores que pueden salir
@@ -11,7 +11,7 @@
   ini_set('display_errors', 1);
 
   //Importar Base De Datos
-  require '../../BaseDeDatos/database.php';
+  require '../../../BaseDeDatos/database.php';
   $db = conectarDB();
 
   // Columna por defecto para ordenar
@@ -19,19 +19,19 @@
 
   $consulta = "SELECT tickets.FOLIO_TICKET, tickets.OPCIONES, tickets.ASUNTO, tickets.DESCRIPCION, tickets.FECHA_CREACION, tickets.ID_USUARIO, tickets.REVISION,
     usuario.NOMBREUSUARIO, usuario.USUARIOID, usuario.ROLID, usuario.ECORREO, usuario.NOMBRE, usuario.APELLIDOPATERNO, usuario.APELLIDOMATERNO, usuario.NUMEROCUENTA, usuario.GRUPO, usuario.GRADO
-    FROM tickets INNER JOIN usuario ON tickets.ID_USUARIO = USUARIOID WHERE tickets.REVISION = 0 ORDER BY $orderBy";
+    FROM tickets INNER JOIN usuario ON tickets.ID_USUARIO = USUARIOID WHERE tickets.REVISION = 1 ORDER BY $orderBy";
   $resultado = mysqli_query($db, $consulta);
 ?>
 
 <html>
 <head>
-  <title>Lista de Tickets</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Lista de Tickets Revisados</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <h1>Lista de Tickets</h1>
+  <h1>Lista de Tickets Revisados</h1>
 
-  <a href="../../Dashboard/index.php" class="boton">Inicio</a> <br> <br> <br>
+  <a href="../../../Dashboard/index.php" class="boton">Inicio</a> <br> <br> <br>
 
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="orden">Ordenar por:</label>
@@ -61,7 +61,6 @@
         echo "<div class='ticket-info'>Número de Cuenta: " . $consulta["NUMEROCUENTA"] . "</div>";
         echo "<div class='ticket-info'>Grupo: " . $consulta["GRUPO"] . "</div>";
         echo "<div class='ticket-info'>Grado: " . $consulta["GRADO"] . "</div> <br>";
-        echo "<a href='detalles/detalles.php?id=" . $consulta["FOLIO_TICKET"] . "'class='boton'>Detalles</a>";
         echo "</div>";
     }
   } else {

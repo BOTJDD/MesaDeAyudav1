@@ -17,11 +17,19 @@
 
             <div class="profile">
                 <div class="info">
-                    <p>Bienvenido, <b>Administrador</b></p>
-                    <small class="text-muted">Admin</small>
+                    <p>Bienvenido, <b><?php echo $_SESSION['NombreUsuario'];?></b></p>
+                    <?php
+                
+                        if($_SESSION['Rol'] == 1){
+                            ?><small class="text-muted">Administrador</small><?php
+                        }else{
+                            ?><small class="text-muted">Usuario</small><?php
+                        }
+                    ?>
+                    
                 </div>
                 <div class="profile-photo">
-                    <img src="/Dashboard/images/now.png">
+                    <img loading="lazy" src="../Imagenes/<?php echo $_SESSION['FotoDePerfil'] . ".jpg"; ?>">
                 </div>
             </div>
 
@@ -34,207 +42,30 @@
             notifications_none
         </span>
         </div>
-
         <div class="notifications">
             <div class="header">
             </div>
-
-            <div class="notification">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>GRAFICAAAAS</h3>
-                        <small class="text_muted">
-                            14:00
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification deactive">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        edit
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>YA QUEDO EL RCN???????</h3>
-                        <small class="text_muted">
-                            16:00
-                        </small>
-                    </div>  
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>GRAFICAAAAS</h3>
-                        <small class="text_muted">
-                            14:00
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification deactive">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        edit
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>YA QUEDO EL RCN???????</h3>
-                        <small class="text_muted">
-                            16:00
-                        </small>
-                    </div>  
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>GRAFICAAAAS</h3>
-                        <small class="text_muted">
-                            14:00
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification deactive">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        edit
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>YA QUEDO EL RCN???????</h3>
-                        <small class="text_muted">
-                            16:00
-                        </small>
-                    </div>  
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>GRAFICAAAAS</h3>
-                        <small class="text_muted">
-                            14:00
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification deactive">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        edit
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>YA QUEDO EL RCN???????</h3>
-                        <small class="text_muted">
-                            16:00
-                        </small>
-                    </div>  
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        volume_up
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>GRAFICAAAAS</h3>
-                        <small class="text_muted">
-                            14:00
-                        </small>
-                    </div>
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification deactive">
-                <div class="icon">
-                    <span class="material-icons-sharp">
-                        edit
-                    </span>
-                </div>
-                <div class="content">
-                    <div class="info">
-                        <h3>YA QUEDO EL RCN???????</h3>
-                        <small class="text_muted">
-                            16:00
-                        </small>
-                    </div>  
-                    <span class="material-icons-sharp">
-                        more_vert
-                    </span>
-                </div>
-            </div>
-
-            <div class="notification add-reminder">
-                <div>
-                    <span class="material-icons-sharp">
-                        remove  
-                    </span>
-                    <h3>Eliminar Notificaciones</h3>
+            <?php
+                $resultado_tickets = mysqli_query($db, "SELECT * FROM tickets WHERE REVISION = 0");
+                if ($resultado_tickets && mysqli_num_rows($resultado_tickets) > 0) {
+                    while ($ticket = mysqli_fetch_assoc($resultado_tickets)) {
+                        echo '<div class="notification">';
+                        echo '<div class="icon">';
+                        echo '<span class="material-icons-sharp">volume_up</span>';
+                        echo '</div>';
+                        echo '<div class="content">';
+                        echo '<div class="info">';
+                        echo '<h3>' . $ticket["ASUNTO"] . '</h3>';
+                        echo '<small class="text_muted">' . date("H:i", strtotime($ticket["FECHA_CREACION"])) . '</small>';
+                        echo '</div>';
+                        echo '<span class="material-icons-sharp">more_vert</span>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo 'No se encontraron tickets con revisión igual a 0.';
+                }
+                ?>
                 </div>
             </div>
         </div>
